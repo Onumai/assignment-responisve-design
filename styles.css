@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 html{
     font-size: 18px;
 }
@@ -5,7 +12,7 @@ html{
 body {
     width: 1440px;
     height: 1901px;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     font-family: 'Inter', sans-serif ;
 }
@@ -16,7 +23,7 @@ a {
 }
 
 #upper-half {
-    background-image: url(background.png);
+    background-image: url(background-desktop.png);
     width: 100%;
     height: 1024px;
 }
@@ -27,7 +34,7 @@ a {
 
 #logo {
     width: 50%;
-    margin: 32px;
+    margin: 32px 0 0 32px;
 }
 
 #navbar {
@@ -56,7 +63,104 @@ button {
     border: 2px solid #ffffff;
     background: none;
     color: #ffffff;
-    font-size: 1rem;
-    
+    font-size: 1rem;   
 }
 
+#title-box {
+    width: 748px;
+    height: 411px;
+    margin-left: 72px;
+    margin-top: 210px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#blank {
+    max-width: 90px;
+    min-height: 15px;
+    background-color: #ffffff;    
+}
+
+#title-header {
+    height: 198px;
+    width: 748px;   
+}
+
+#title-header h1 {
+    color: #ffffff;
+    font-family: 'Libre Caslon Display', sans-serif;
+    font-weight: 400;
+    font-size: 4.44rem;
+    -webkit-text-stroke: 1px #ffffff;
+    line-height: 98.88px;
+    margin: 0;
+}
+
+#title-box-text {
+    width: 528px;
+    height: 60px;
+}
+
+#title-box-text p {
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 30.33px;
+    margin: 0;
+}
+
+h2 {
+    font-weight: 700;
+    margin-top: 89px;
+    margin-left: 72px;
+    font-size: 2.22rem;
+}
+
+#cards {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 72px;
+    margin-block: 40px;
+}
+
+.news-card {
+    width: 419px;
+    max-height: 632px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+}
+
+.text-card {
+    border: 1px solid #dddddd;
+    max-width: 419px;
+    height: 296px;
+    border-radius: 4px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: -10px;
+    z-index: -1;
+}
+
+.text-card span {
+    color: #B7B7B7;
+}
+
+h3 {
+    margin: 0;
+    height: 120px;
+    width: 355px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30.26px;
+}
+
+.news-card a{
+    color: #D9852C;
+    align-self: flex-end;
+}
