@@ -1,20 +1,12 @@
-
-
-
-
-
-
-
-html{
+html {
     font-size: 18px;
 }
 
 body {
-    width: 1440px;
-    height: 1901px;
     margin: 0 auto;
     padding: 0;
     font-family: 'Inter', sans-serif ;
+    width: 375px;    
 }
 
 a {
@@ -22,14 +14,18 @@ a {
     color: #ffffff;
 }
 
+
 #upper-half {
-    background-image: url(background-desktop.png);
-    width: 100%;
+    background-image: url(background-mobile.png);  
     height: 1024px;
+    min-width: 100%;       
 }
+
+
 
 #header {
     display: flex;
+    justify-content: space-between;
 }
 
 #logo {
@@ -38,22 +34,25 @@ a {
 }
 
 #navbar {
-    width: 50%;
-    height: 42px;
-    padding: 0;
-    margin-top: 32px ;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+    display: none;
 }
 
+#hamburgermenu {
+    width: 35px;
+    height: 35px;
+    margin: 32px 32px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-
-.navitem {
-    color: #ffffff;  
-    font-size: 1rem;
-    margin-right: 23px;
-    padding: 0; 
+#hamburgermenu #container {
+    min-width: 26.25px;
+    min-height: 2.92px;
+    background-color: #ffffff;
+    border-radius: calc(2.92px/2);
+    margin: calc(4.38px/2) 0 calc(4.38px/2) 0;
 }
 
 button {
@@ -67,9 +66,9 @@ button {
 }
 
 #title-box {
-    width: 748px;
-    height: 411px;
-    margin-left: 72px;
+    width: 314px;
+    height: 429px;
+    margin-inline: auto;
     margin-top: 210px;
     padding: 0;
     display: flex;
@@ -83,24 +82,19 @@ button {
     background-color: #ffffff;    
 }
 
-#title-header {
-    height: 198px;
-    width: 748px;   
-}
-
 #title-header h1 {
     color: #ffffff;
     font-family: 'Libre Caslon Display', sans-serif;
     font-weight: 400;
-    font-size: 4.44rem;
+    font-size: 2.77rem;
     -webkit-text-stroke: 1px #ffffff;
-    line-height: 98.88px;
+    line-height: 61.8px;
     margin: 0;
 }
 
 #title-box-text {
-    width: 528px;
-    height: 60px;
+    width: 314px;
+    height: 90px;
 }
 
 #title-box-text p {
@@ -115,52 +109,286 @@ button {
 h2 {
     font-weight: 700;
     margin-top: 89px;
-    margin-left: 72px;
-    font-size: 2.22rem;
+    margin-left: 32px;
+    font-size: 1.33rem;
 }
 
 #cards {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    margin-inline: 72px;
     margin-block: 40px;
 }
 
+img {
+    object-fit: cover;
+}
+
 .news-card {
-    width: 419px;
-    max-height: 632px;
+    width: 311px;
+    min-height: 619px;
     display: flex;
     flex-direction: column;
-    justify-content: center;   
+    margin: 20px auto;
+}
+
+#img1-desktop,
+#img1-tablet,
+#img2-desktop,
+#img2-tablet,
+#img2-desktop,
+#img2-tablet,
+#img3-desktop,
+#img3-tablet {
+    display: none;
+}
+
+#img1-mobile,
+#img2-mobile,
+#img3-mobile {
+    display: block;
 }
 
 .text-card {
     border: 1px solid #dddddd;
-    max-width: 419px;
-    height: 296px;
+    max-width: 311px;
+    min-height: 288.54px;
     border-radius: 4px;
-    padding: 32px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-top: -10px;
     z-index: -1;
+    padding: 32px;
 }
 
 .text-card span {
     color: #B7B7B7;
+    margin-block: 10px;
 }
 
 h3 {
     margin: 0;
     height: 120px;
-    width: 355px;
-    font-size: 25px;
+    width: 247px;
+    font-size: 1.11rem;
     font-weight: 700;
-    line-height: 30.26px;
+    line-height: 24.2px;
+    margin-block: 10px;
 }
 
 .news-card a{
     color: #D9852C;
     align-self: flex-end;
+    margin-block: 10px;
+}
+
+
+@media screen and (min-width: 576px) {
+    body {
+        width: 744px;
+    }
+    
+    #upper-half {
+        background-image: url(background-tablet.png);
+        background-repeat: no-repeat;
+        min-height: 1024px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #title-box {
+        width: 600px;
+        height: 387px;
+        margin-inline: auto;
+        margin-top: 210px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #title-header h1 {
+        font-size: 3.88rem;
+        line-height: 86.52px;   
+    }
+
+    #title-box-text {
+        width: 528px;
+        height: 60px;
+    }
+
+    h2 {
+        margin-left: 72px;
+        font-size: 2.22rem;
+    }
+
+    #cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-inline: 72px;
+        margin-block: 40px;
+    }
+
+    .news-card {
+        width: 187px;
+        max-height: 635px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 0 72px 0;
+    }
+
+    #img1-desktop,
+    #img1-mobile,
+    #img2-desktop,
+    #img2-mobile,
+    #img2-desktop,
+    #img2-mobile,
+    #img3-desktop,
+    #img3-mobile {
+    display: none;
+    }
+
+    #img1-tablet,
+    #img2-tablet,
+    #img3-tablet {
+        display: block;
+    }
+
+    #head-card {
+        width: 123px;
+        height: 126px;
+        font-size: 15px;
+        line-height: 18.15px;
+        font-weight: 700;
+    }
+
+    #date-card {
+        font-size: 13px;
+    }
+
+    .news-card a{
+        color: #D9852C;
+        align-self: flex-end;
+        margin-block: 0px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 18.15px;
+    }
+
+    .text-card {
+        max-width: 187px;
+        max-height: 296px;
+    }
+
+}
+
+
+
+@media screen and (min-width: 768px) {
+    body {
+        width: 1440px;
+    }
+
+    #upper-half {
+        background-image: url(background-desktop.png);
+        background-repeat: no-repeat;
+        min-height: 1024px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #hamburgermenu {
+        display: none;
+    }
+
+    #navbar {
+        width: 50%;
+        height: 42px;
+        padding: 0;
+        margin-top: 32px ;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+
+    .navitem {
+        color: #ffffff;  
+        font-size: 1rem;
+        margin-right: 23px;
+        padding: 0; 
+    }
+
+    #title-box {
+        width: 748px;
+        height: 411px;
+        margin-left: 72px;
+        margin-top: 210px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #title-header {
+        height: 198px;
+        width: 748px;   
+    }
+    #title-header h1 {
+        font-size: 4.44rem;
+        line-height: 98.88px;   
+    }
+
+    .news-card {
+        min-width: 419px;
+        max-height: 635px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;   
+    }
+
+    #img1-mobile,
+    #img1-tablet,
+    #img2-mobile,
+    #img2-tablet,
+    #img2-mobile,
+    #img2-tablet,
+    #img3-mobile,
+    #img3-tablet {
+        display: none;
+    }
+
+    #img1-desktop,
+    #img2-desktop,
+    #img3-desktop {
+        display: block;
+    }
+
+    #head-card {
+        width: 355px;
+        height: 120px;
+        font-size: 25px;
+        line-height: 30.26px;
+        font-weight: 700;
+    }
+
+    #date-card {
+        font-size: 15px;
+    }
+
+    .news-card a{
+        color: #D9852C;
+        align-self: flex-end;
+        margin-block: 0px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 18.15px;
+    }
+    
+    .text-card {
+        max-width: 419px;
+        min-height: 296px;
+    }
 }
